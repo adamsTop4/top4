@@ -1,0 +1,111 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<style id="ss" rel="stylesheet" type="text/css">
+#tabs { 
+  float:left; 
+  position:relative;
+  width:455px; 
+  margin-bottom:10px;
+}
+#tabs #buttons { 
+  position:absolute; 
+  top:0; left:0; 
+  width:150px;
+  margin:0; padding:0;
+  background-color:#ddd; 
+  color:#888; 
+  border-top:1px solid #999;
+  list-style:none;
+}
+#tabs #buttons li { 
+  border-bottom:1px solid #999; 
+  border-left:1px solid #999;
+}
+#tabs #buttons a {
+  text-decoration:none;
+  color:#888; 
+  display:block; 
+  border-right:1px solid #999;
+  padding:5px;
+}
+#tabs #buttons a:hover { background-color:#eee; }
+#tabs #buttons a.selected { 
+  color:black; 
+  background-color:#FDE9F0; 
+  border-right-width:0px;
+}
+#tabs #buttons a.selected:hover { background-color:#FDE9F0; }
+
+#tabs .infobox {
+  margin-left:150px;
+  padding:6px 12px;
+  border:1px solid #999;
+  border-left-width:0px;
+  background-color:#FDE9F0;
+  display:none;
+}
+#tabs .enabled { display:block; }
+#tabs .infobox ul { margin-left:20px; padding-left:0px; }
+</style>
+<script language="JavaScript" type="text/javascript">
+function selectTab(num) {
+  for (var i=1; i <= 4; i++) {
+    document.getElementById("tab" + i).className = "";
+    document.getElementById("box" + i).className = "infobox";
+  }
+  document.getElementById("tab" + num).className = "selected";
+  document.getElementById("box" + num).className = "infobox enabled";
+}
+</script>
+</head>
+
+<body onload="selectTab(1);">
+  <div id="tabs"> 
+      
+    <ul id="buttons">
+        
+      <li><a href="#" id="tab1" onclick="selectTab(1); return false;" onfocus="blur();">Tab 1</a></li>
+      <li><a href="#" id="tab2" onclick="selectTab(2); return false;" onfocus="blur();">Tab 2</a></li>
+      <li><a href="#" id="tab3" onclick="selectTab(3); return false;" onfocus="blur();">Tab 3</a></li>
+      <li><a href="#" id="tab4" onclick="selectTab(4); return false;" onfocus="blur();">Tab 4</a></li>
+    </ul>
+    <div id="box1" class="infobox"> 
+        
+      <p>such as:</p>
+      <ul>
+          
+        <li>N</li>
+        <li>M</li>
+        <li>A</li>
+        <li>F</li>
+        <li>A</li>
+      </ul>
+    </div>
+    <div id="box2" class="infobox"> 
+        
+      <p>box 2 <BR/><BR/><BR/><BR/><BR/><BR/></p>
+    </div>
+    <div id="box3" class="infobox">
+        
+      <p>this is a test. this is a test. </p>
+      <ul>
+        <li>H</li>
+        <li>W</li>
+        <li>E</li>
+        <li>S</li>
+      </ul>
+    </div>
+    <div id="box4" class="infobox"> 
+        
+      <p>this is a test. this is a test. </p>
+      <p>this is a test. this is a test. </p>
+    </div>
+  </div>
+  </div>
+</body>
+</html>
