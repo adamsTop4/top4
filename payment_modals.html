@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment</title>
+</head>
+<body>
+
+<style type="text/css">
+	.wrapper {
+	  display: grid;
+	  grid-template-columns: repeat(3, 1fr);
+	  gap: 1px;
+	  grid-auto-rows: minmax(100px, auto);
+	  background-color: white;
+	  text-align: center;
+	  border-style: outset;
+	}
+	.one {
+	  grid-column: 1;
+	  border-style: outset;
+	  /*grid-row: 1/4;*/
+	  /*background-color: gold;*/
+	}
+	.two {
+	  grid-column: 2;
+	  border-style: outset;
+	  /*grid-row: 1/4;*/
+	  /*background-color: gold;*/
+	}
+	.three {
+	  grid-column: 3;
+	  border-style: outset;
+	  /*grid-row: 1/4;*/
+	  /*background-color: gold;*/
+	}
+	.label {
+	  color: white;
+	  padding: 4px;
+	  margin-left: 15px;
+	}
+	.red {background-color: #f44336;} /* Red */
+	/*button*/
+	.button {
+	  background-color: #4CAF50; /* Green */
+	  border: none;
+	  color: white;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 24px 0px;
+	  cursor: pointer;
+	}
+	/*separator*/
+	/* Solid border */
+	hr.solid {
+	  border-top: 3px solid #bbb;
+	}
+	/*ribbon*/
+	.ribbon-wrapper-9 {
+	  width: 108px;
+	  height: 108px;
+	  overflow: hidden;
+	  position: absolute;
+	  top: -6px;
+	  right: -6px;
+	}
+
+	.ribbon-9 {
+	  font: bold 15px Sans-Serif;
+	  line-height: 18px;
+	  color: #e9ea7b;
+	  text-align: center;
+	  text-transform: uppercase;
+	  -webkit-transform: rotate(45deg);
+	  -moz-transform: rotate(45deg);
+	  -ms-transform: rotate(45deg);
+	  -o-transform: rotate(45deg);
+	  position: relative;
+	  padding: 7px 0;
+	  left: -4px;
+	  top: 26px;
+	  width: 150px;
+	  background-color: #6daaab;
+	  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	  letter-spacing: 0.5px;
+	  box-shadow: -3px 5px 6px -5px rgba(0, 0, 0, 0.5);
+	  outline: 1px dotted #e5e82c;
+	  outline-offset: -4px;
+	  background-image: radial-gradient(circle farthest-side, #ff1c1a, #bf0b00);
+	  text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.2);
+	}
+
+	.ribbon-9:before,
+	.ribbon-9:after {
+	  content: "";
+	  border-top: 4px solid #bf0b00;
+	  border-left: 4px solid transparent;
+	  border-right: 4px solid transparent;
+	  position: absolute;
+	  bottom: -4px;
+	}
+
+	.ribbon-9:before {
+	  content: "";
+	  position: absolute;
+	  left: 0px;
+	  top: 100%;
+	  z-index: -1;
+	  border-left: 4px solid #bf0b00;
+	  border-right: 4px solid transparent;
+	  border-bottom: 4px solid transparent;
+	  border-top: 4px solid #bf0b00;
+	}
+
+	.ribbon-9:after {
+	  content: "";
+	  position: absolute;
+	  right: 7px;
+	  top: 100%;
+	  z-index: -1;
+	  border-left: 4px solid transparent;
+	  border-right: 4px solid #bf0b00;
+	  border-bottom: 4px solid transparent;
+	  border-top: 4px solid #bf0b00;
+	}
+
+	
+</style>
+<div class="wrapper">
+  <div class="one">
+  		<div>
+	  		<h2>STARTER</h2>
+	  		<p style="color: grey">For start up business</p>
+	  		<p>
+	  		<p style="">From</p><a style="font-size: 50px; font-weight: bold;">$3.58</a><a style="font-size: 20px; font-weight: bold;">/mo</a></p>
+	  		<a style="font-size: 40px; text-decoration: line-through;">$5.11</a> <span class="label red">SAVE 30%</span>
+  		</div>
+  		<button class="button">Buy Now</button>
+  		<div>
+	  		<p style="font-size: 18px;"><b>Business</b><br>Profile</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Up to 14</b><br>Service Areas</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Up to 3</b><br>Galleries</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Up to 5</b><br>Products</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Get 1</b><br>Promotion</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Get 1</b><br>Post</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Get 1</b><br>Job</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Social Media</b> Sharing</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Email</b> Support</p>
+			<hr class="solid">
+			<p style="font-size: 18px;">~</p>
+			<hr class="solid">
+			<p style="font-size: 18px;">~</p>
+			<hr class="solid">
+  		</div>
+  		
+  </div>
+  <div class="two">
+  		<div>
+	  		<h2>PROFESSIONAL</h2>
+	  		<p style="color: grey">Most POPULAR for SMEs</p>
+	  		<p>
+	  		<p style="">From</p><a style="font-size: 50px; font-weight: bold;">$5.72</a><a style="font-size: 20px; font-weight: bold;">/mo</a></p>
+	  		<a style="font-size: 40px; text-decoration: line-through;">$8.17</a> <span class="label red">SAVE 30%</span>
+  		</div>
+  		<button class="button">Buy Now</button>
+  		<div>
+	  		<p style="font-size: 18px;"><b>Business</b><br>Profile</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Up to 40</b><br>Service Areas</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Up to 5</b><br>Galleries</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Up to 12</b><br>Products</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Get 3</b><br>Promotion</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Get 3</b><br>Post</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Get 3</b><br>Job</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Social Media</b> Sharing</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Email</b> Support</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Reviews</b> Tools</p>
+			<hr class="solid">
+			<p style="font-size: 18px;">~</p>
+			<hr class="solid">
+  		</div>
+  </div>
+  <div class="three">
+  		<div>
+	  		<h2>PROFESSIONAL</h2>
+	  		<p style="color: grey">Most POPULAR for SMEs</p>
+	  		<p>
+	  		<p style="">From</p><a style="font-size: 50px; font-weight: bold;">$5.72</a><a style="font-size: 20px; font-weight: bold;">/mo</a></p>
+	  		<a style="font-size: 40px; text-decoration: line-through;">$8.17</a> <span class="label red">SAVE 30%</span>
+  		</div>
+  		<button class="button">Buy Now</button>
+  		<div>
+	  		<p style="font-size: 18px;"><b>Business</b><br>Profile</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Up to 40</b><br>Service Areas</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Up to 5</b><br>Galleries</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Up to 12</b><br>Products</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Get 3</b><br>Promotion</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Get 3</b><br>Post</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Get 3</b><br>Job</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Social Media</b> Sharing</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Email</b> Support</p>
+			<hr class="solid">
+			<p style="font-size: 18px;"><b>Reviews</b> Tools</p>
+			<hr class="solid">
+			<p style="font-size: 18px;">~</p>
+			<hr class="solid">
+  		</div>
+  		    <div class='ribbon-wrapper-9'>
+		      <div class='ribbon-9'>BEST VALUE</div>
+		    </div>
+  </div>
+</div>
+
+</body>
+</html>
