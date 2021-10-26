@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nested Modals</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <style type="text/css">
+    .modal-content{
+       text-align: center;
+    }
+
+    .modal-backdrop.in{
+  display: none;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    grid-auto-rows: minmax(100px, auto);
+    background-color: white;
+    text-align: center;
+    border-style: outset;
+    zoom: 45%;
+  }
+  .one {
+    grid-column: 1;
+    border-style: outset;
+    /*grid-row: 1/4;*/
+    /*background-color: gold;*/
+  }
+  .two {
+    grid-column: 2;
+    border-style: outset;
+    /*grid-row: 1/4;*/
+    /*background-color: gold;*/
+  }
+  .three {
+    grid-column: 3;
+    border-style: outset;
+    /*grid-row: 1/4;*/
+    /*background-color: gold;*/
+  }
+  .label {
+    color: white;
+    padding: 4px;
+    margin-left: 15px;
+  }
+  .red {background-color: #f44336;} /* Red */
+  /*button*/
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 24px 0px;
+    cursor: pointer;
+  }
+  /*separator*/
+  /* Solid border */
+  hr.solid {
+    border-top: 3px solid #bbb;
+  }
+  /*ribbon*/
+  .ribbon-wrapper-9 {
+    width: 108px;
+    height: 108px;
+    overflow: hidden;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+  }
+
+  .ribbon-9 {
+    font: bold 15px Sans-Serif;
+    line-height: 18px;
+    color: #e9ea7b;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    position: relative;
+    padding: 7px 0;
+    left: -4px;
+    top: 26px;
+    width: 150px;
+    background-color: #6daaab;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+    box-shadow: -3px 5px 6px -5px rgba(0, 0, 0, 0.5);
+    outline: 1px dotted #e5e82c;
+    outline-offset: -4px;
+    background-image: radial-gradient(circle farthest-side, #ff1c1a, #bf0b00);
+    text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .ribbon-9:before,
+  .ribbon-9:after {
+    content: "";
+    border-top: 4px solid #bf0b00;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    position: absolute;
+    bottom: -4px;
+  }
+
+  .ribbon-9:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    z-index: -1;
+    border-left: 4px solid #bf0b00;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid #bf0b00;
+  }
+
+  .ribbon-9:after {
+    content: "";
+    position: absolute;
+    right: 7px;
+    top: 100%;
+    z-index: -1;
+    border-left: 4px solid transparent;
+    border-right: 4px solid #bf0b00;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid #bf0b00;
+  }
+  </style>
+
+<div class="container">
+  <h2>Basic to Nested Modals</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Nested Modals</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="font-size:100px;"><img src="https://yt3.ggpht.com/ytc/AKedOLQDbMmOG2B-GXDte41qpM2k8M4arVfAOZ_4yZ7Rdg=s900-c-k-c0x00ffffff-no-rj" width="20%"></h4>
+        </div>
+        <div class="modal-body">
+              <div class="col" style="text-align: justify; margin-left: 100px;">
+                  <h1>Free Upgrade</h1>
+                  <h2>To Top4 <span>Premium</span></h2>
+                  <p>Join over <b>150,000</b> businesses & franchises globally.
+                  <b>Get found on Google</b> and reach local customers today!</p>
+                  <ul>
+                  <li><b>Increase traffic to your site Instantly</b></li>
+                  <li><b>Google & Social Media Advertising</b>
+                  for local business</li>
+                  <li><b>Be found on the top pages</b> of
+                  local searches</li>
+                  <li>New <b>geolocation</b> marketing platform
+                  that <b>gets you results</b></li>
+                  <li><b>Become a Top4 Recommended
+                  Business</b> - Join Today!</li>
+                  </ul>
+              </div>
+        </div>
+        <div class="modal-footer" style="text-align: center;">
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2" id="but1" style="text-align: center; color: green;">Choose the Packages</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+
+          <div class="wrapper">
+            <div class="one">
+                <div>
+                  <h2><b>STARTER</b></h2>
+                  <p style="color: grey">For start up business</p>
+                  <p>
+                  <p style="">From</p><a style="font-size: 50px; font-weight: bold;">$3.58</a><a style="font-size: 20px; font-weight: bold;">/mo</a></p>
+                  <a style="font-size: 40px; text-decoration: line-through;">$5.11</a> <span class="label red">SAVE 30%</span>
+                </div>
+                <a href="https://buy.stripe.com/8wMcPR67wfH54o0dQR"><button class="button" style="width: 80%;">Buy Now</button></a>
+                <div>
+                  <p style="font-size: 18px;"><b>Business</b><br>Profile</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Up to 14</b><br>Service Areas</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Up to 3</b><br>Galleries</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Up to 5</b><br>Products</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Get 1</b><br>Promotion</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Get 1</b><br>Post</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Get 1</b><br>Job</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Social Media</b> Sharing</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Email</b> Support</p>
+                <hr class="solid">
+                <p style="font-size: 18px;">~</p>
+                <hr class="solid">
+                <p style="font-size: 18px;">~</p>
+                <hr class="solid">
+                </div>
+                
+            </div>
+            <div class="two">
+                <div>
+                  <h2><b>PROFESSIONAL</b></h2>
+                  <p style="color: grey">Most POPULAR for SMEs</p>
+                  <p>
+                  <p style="">From</p><a style="font-size: 50px; font-weight: bold;">$5.72</a><a style="font-size: 20px; font-weight: bold;">/mo</a></p>
+                  <a style="font-size: 40px; text-decoration: line-through;">$8.17</a> <span class="label red">SAVE 30%</span>
+                </div>
+                <a href="https://buy.stripe.com/8wMcPR67wfH54o0dQR"><button class="button" style="width: 80%;">Buy Now</button></a>
+                <div>
+                  <p style="font-size: 18px;"><b>Business</b><br>Profile</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Up to 40</b><br>Service Areas</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Up to 5</b><br>Galleries</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Up to 12</b><br>Products</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Get 3</b><br>Promotion</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Get 3</b><br>Post</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Get 3</b><br>Job</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Social Media</b> Sharing</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Email</b> Support</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Reviews</b> Tools</p>
+                <hr class="solid">
+                <p style="font-size: 18px;">~</p>
+                <hr class="solid">
+                </div>
+            </div>
+            <div class="three">
+                <div>
+                  <h2><b>ENTERPRISE</b></h2>
+                  <p style="color: grey">The plan for large corporations</p>
+                  <p>
+                  <p style="">From</p><a style="font-size: 50px; font-weight: bold;">$7.83</a><a style="font-size: 20px; font-weight: bold;">/mo</a></p>
+                  <a style="font-size: 40px; text-decoration: line-through;">$11.19</a> <span class="label red">SAVE 30%</span>
+                </div>
+                <a href="https://buy.stripe.com/8wMcPR67wfH54o0dQR"><button class="button" style="width: 80%;">Buy Now</button></a>
+                <div>
+                  <p style="font-size: 18px;"><b>Business</b><br>Profile</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Up to 80</b><br>Service Areas</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Unlimited</b><br>Galleries</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Unlimited</b><br>Products</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Unlimited</b><br>Promotion</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Unlimited</b><br>Post</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Unlimited</b><br>Job</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Social Media</b> Sharing</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Email</b> Support</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>Reviews</b> Tools</p>
+                <hr class="solid">
+                <p style="font-size: 18px;"><b>VIP</b> Badges</p>
+                <hr class="solid">
+                </div>
+                    <div class='ribbon-wrapper-9'>
+                    <div class='ribbon-9'>BEST<br>VALUE</div>
+                  </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+         <!--  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal3" id="but2">But 2</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header 3</h4>
+        </div>
+        <div class="modal-body">
+          <p>This is a large modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal31" id="but31">But 31</button>
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal32" id="but32">But 32</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal31" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header 31</h4>
+        </div>
+        <div class="modal-body">
+          <p>This is a large modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-toggle="modal" data-dismiss="modal">End</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal32" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header 32</h4>
+        </div>
+        <div class="modal-body">
+          <p>This is a large modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-toggle="modal" data-dismiss="modal">End</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    
+    $(".modal-backdrop.in").hide();
+    $("#but1").click(function(){
+      $("#myModal").modal('hide')
+      document.getElementById("modal2").innerHTML = "Halo "+$("#first_name").val();
+    });
+    $("#but2").click(function(){
+      $("#myModal2").modal('hide')
+    });
+    $("#but31").click(function(){
+      $("#myModal3").modal('hide')
+    });
+    $("#but32").click(function(){
+      $("#myModal3").modal('hide')
+    });
+  });
+</script>
+
+</body>
+</html>
